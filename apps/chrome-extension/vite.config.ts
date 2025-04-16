@@ -1,11 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import DevPreview from './plugins/dev-preview' // Import the custo
 import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), DevPreview()],
   build: {
     emptyOutDir: true, // Clear the output directory before building
     sourcemap: false, // Generate source maps for debugging
